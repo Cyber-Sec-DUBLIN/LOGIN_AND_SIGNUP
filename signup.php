@@ -13,12 +13,7 @@ if (isset($_POST["submit"])) { //if theres a post request
     try {
         $connection = new PDO($dsn, $username, $password, $options); 
         
-        $new_account = array( //creating an array where in which the variables are equal to the items in the forum below
-            "username" => $_POST['username'],
-            "email" => $_POST['email'],
-            "password" => $_POST['password'],
-           
-        );
+ include "USER_CLASS.php";
 
         $sql = sprintf("INSERT INTO %s (%s) values (%s)", "site_users", //no idea what this all does
         implode(", ", array_keys($new_account)),
