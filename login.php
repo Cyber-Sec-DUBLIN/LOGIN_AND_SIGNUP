@@ -13,15 +13,20 @@ if (isset($_POST["submit"])) { //if theres a post request
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
 
-
-       //toook out array due to issues
-            $username = $_POST['username'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+    
+        
+       include "USER_CLASS.php";
            
-        //   echo "Entered Username: $username <br>"; debugging
-        //echo "Entered Email: $email <br>";
-        //echo "Entered Password: $password <br>";
+ 
+
+//USE ENCAPSULATION TO PUT THE STUFF FOR LOGIN/SIGNUP IN A DIFFERENT FILE AND BRING IT INTO HERE WITH INCLUDE!
+        
+
+        
+        
+       //toook out array due to issues
+           
+           
 
      
 
@@ -41,7 +46,8 @@ if (isset($_POST["submit"])) { //if theres a post request
         
         } 
         else{
-            echo "It didnt work";
+            echo "enter info";
+          
         }
        
 
